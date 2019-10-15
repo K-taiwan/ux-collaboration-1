@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const DB_URI = process.envMONGODB_URI || 'mongodb://localhost:27017/hillary-duff';
+const DB_URL = process.envMONGODB_URI || 'mongodb://localhost:27017/hillary-duff';
 
-mongoose.connect(DB_URI, {
+mongoose.connect(DB_URL, {
   useNewUrlParser: true,
   useFindAndModify: false,
   useCreateIndex: true,
@@ -10,7 +10,7 @@ mongoose.connect(DB_URI, {
   .catch((err) => console.log(err));
 
   module.exports = {
-    Contact: require('./Contact'),
+    Contact: require('./Subscriber'),
     Photo: require('./Photo'),
     Video: require('./Video'),
   };
