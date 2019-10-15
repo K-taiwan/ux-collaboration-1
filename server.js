@@ -9,10 +9,16 @@ const app = express();
 // Server PORT
 const PORT = process.env.PORT || 3000;
 
+const db = require('./models');
+
 //------------------------- MiddleWare --------------------------------------//
 
 //Server Static  Asset to 
 app.use(express.static(`${__dirname}/public`));
+
+// Body Parser
+app.use(bodyParser.url({ extended: true }));
+app.use(bodyParser.json());
 
 //------------------------------------ app routes------------------------------//
 //GET Home route(root)
