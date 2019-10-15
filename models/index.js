@@ -10,7 +10,7 @@ mongoose.connect(DB_URL, {
   .catch((err) => console.log(err));
 
   module.exports = {
-    Contact: require('./Subscriber'),
+    Subscriber: require('./Subscriber'),
     Photo: require('./Photo'),
     Video: require('./Video'),
   };

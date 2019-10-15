@@ -14,6 +14,7 @@ const subscriberSchema = new Schema({
     type: String,
     required: true,
   },
+  interests: [String]
 })
 
 const Subscriber = mongoose.model('Subscriber', subscriberSchema);
