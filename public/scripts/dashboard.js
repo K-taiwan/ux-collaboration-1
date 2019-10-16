@@ -10,7 +10,7 @@ onSuccess = (response) => {
     <td>${subscriber.interests}</td>
     </tr>
     `;
-    $('#dashboard').append(template);
+    $('tbody').append(template);
   })
 };
 
