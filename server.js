@@ -71,26 +71,54 @@ app.get('/api/v1/subscribers', (req, res) => {
   })
 });
 
-// events
-app.get('/events', (req, res) => {
-  res.sendFile('views/events.html', {
-    root: __dirname, 
-  });
+
+app.get('/api/v1/subscribers/:id', (req, res) => {
+  db.Subscriber.findById(req.params.id, (err, newSubscriber) => {
+    if (err) return console.log(err);
+
+    res.json({
+      status: 200,
+      count: 1,
+      data: newSubscriber,
+      dateRequested: new Date().toLocaleString()
+    })
+  })
 });
 
-// P Gallery
-app.get('/photo-gallery', (req, res) => {
-  res.sendFile('views/photo-gallery.html', {
-    root: __dirname, 
-  });
+// DELETE ROUTE
+app.delete('/api/v1/subscribers', (req, res) => {
+  db.Subscriber.deleteMany({}, (err, deletedSubscribers) => {
+    if (err) return console.log(err);
+
+    res.json({
+      status: 200,
+      count: deletedSubscribers.length,
+      data: deletedSubscribers,
+      dateRequested: new Date().toLocaleString()
+    })
+  })
 });
 
-// V  Gallery 
-app.get('/video-gallery', (req, res) => {
-  res.sendFile('views/v-gallery.html', {
-    root: __dirname, 
-  });
-});
+// // events
+// app.get('/events', (req, res) => {
+//   res.sendFile('views/events.html', {
+//     root: __dirname, 
+//   });
+// });
+
+// // P Gallery
+// app.get('/photo-gallery', (req, res) => {
+//   res.sendFile('views/photo-gallery.html', {
+//     root: __dirname, 
+//   });
+// });
+
+// // V  Gallery 
+// app.get('/video-gallery', (req, res) => {
+//   res.sendFile('views/v-gallery.html', {
+//     root: __dirname, 
+//   });
+// });
 
 
 //------------------------------------  Start server ----------------------------//
