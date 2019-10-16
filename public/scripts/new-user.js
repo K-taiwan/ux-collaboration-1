@@ -49,7 +49,7 @@ const formData = () => {
     {
       "firstName": $('#first-name').val(),
       "lastName": $('#last-name').val(),
-      "email": $('#email').val(),
+      "email": $('#user-email').val(),
       "interests": subscriberInterests,
     },
     success: onSuccess,

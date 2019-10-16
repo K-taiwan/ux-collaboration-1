@@ -1,3 +1,54 @@
+/* -----------------------Home page -------------------------------------- */
+
+.carousel-inner {
+  width: 100vw;
+  height: 50vh;
+  background: top center;
+}
+
+.carousel-item {
+  margin: 0 auto;
+  width: 100vw;
+}
+
+.nav-link {
+  float: right;
+  margin-right: 10px;
+}
+
+.photo-gallery {
+  background: url('/images/image-16.png');
+  background-size: cover;
+  height: 50vh;
+  border: 10px solid #E7AEAF;
+}
+.navbar {
+  background: #4EBACA;
+}
+
+#header1 {
+  margin-top: 55px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+
+/* ----------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
 table{
   margin: 25px auto;
  

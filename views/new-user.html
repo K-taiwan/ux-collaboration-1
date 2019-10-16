@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- main css -->
+  <!-- Main CSS -->
   <link rel="stylesheet" href="/style/main.css">
   <!-- jquery -->
   <script defer
@@ -19,8 +19,80 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="container">
+  <!-- <div id="container"> -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="/">Hillary Duff Contacts</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+ <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contacts.html">Contacts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="new-contact.html">Add Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about-us.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact-us.html">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+<!-- END NAV -->
+<main class="container mt-4">
+<section class="col-md-6 offset-md-3">
+  <h3>New User</h3>
+  <!-- Action = submission route -->
+  <!-- Method = how we want to submit our request -->
+  <!-- In the browser, forms only have GET & POST -->
+  <!-- <form action="http://google.com" method="GET"> -->
   <form id="newSubscriber">
+    <div class="mb-4">
+      <label for="firstN">First Name</label>
+      <input id="first-name" class="form-control form-control-lg empty" type="text" name="first-name" placeholder="First Name" />
+    </div>
+    <div class="mb-4">
+        <label for="lastN">Last Name</label>
+        <input id="last-name" class="form-control form-control-lg empty" type="text" name="last-name" placeholder="Last Name" />
+      </div>
+    <div class="mb-4">
+      <label for="email">Email</label>
+      <input id="user-email" class="form-control form-control-lg empty" type="email" name="email" placeholder="example: hDuff@gmail.com" />
+    </div>
+<!-- <div class="mb-4">
+                <label for="phone">Phone</label>
+                <input class="form-control form-control-lg empty" type="text" id="phone" name="phone" placeholder="example: 555-555-5555" />
+              </div>
+              <div class="mb-4">
+                <label for="street">Street Address</label>
+                <input class="form-control form-control-lg empty" type="text" id="street" name="street" placeholder="example: 22 Sesame St." />
+              </div>
+              <div class="mb-4">
+                <label for="zip">Zip Code</label>
+                <input class="form-control form-control-lg empty" type="text" id="zip" name="zip" placeholder="example: 55555" />
+              </div> -->
+              <div id="interests">
+                  <input class="checkbox" id="newsInterest" type="checkbox" name="checkbox1" value="news" > News <br>
+                  <input class="checkbox" id="musicInterest" type="checkbox" name="checkbox2" value="music"> Music <br>
+                  <input class="checkbox" id="videoInterest" type="checkbox" name="checkbox3" value="videos"> Videos <br>
+                  <input class="checkbox" id="gifInterest" type="checkbox" name="checkbox4" value="gifs"> Gifs <br>
+              </div>
+      
+              <input class="btn btn-primary" type="submit">
+            </form>
+          </section>
+        </main>
+  <!-- <form id="newSubscriber">
     <input class="empty" id="first-name" type="text" name="user" placeholder="first name">
     <input class="empty" id="last-name" type="text" name="user" placeholder="last name">
     <input class="empty" id="email" type="text" name="email" placeholder="email">
@@ -31,10 +103,12 @@
       <input class="checkbox" id="gifInterest" type="checkbox" name="checkbox4" value="gifs"> Gifs <br>
     </div>
     <input type="submit">
-  </form>
-</div>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-
+  </form> -->
+<!-- </div> -->
+ <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></!
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
