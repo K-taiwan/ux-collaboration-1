@@ -1,6 +1,6 @@
 // ---------------------- Global Vars ---------------------------------//
 const $newSubscriber = $('#newSubscriber'); 
-const subscriberInterests = [];
+let subscriberInterests = [];
 
 
 
@@ -22,15 +22,22 @@ const handleSubmitForm = (event) => {
 
   validateInterests();
   formData();
+  $('.empty').val('');
+  $('.checkbox').prop('checked', false);
+  subscriberInterests = [];
+  
 }
 
 const onSuccess = () => {
   console.log('success!');
+  
 }
 
 const onError = () => {
   console.log('error!');
 }
+
+
 
 //------------------ user data ----------------------------//
 const formData = () => {
@@ -67,6 +74,8 @@ const validateInterests = () => {
   console.log(subscriberInterests);
 }
 
+// ------------------------ empty ---------------------------//
+$('.empty').empty();
 
 
 // ------------------------ event listener ---------------------------//
