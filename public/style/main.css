@@ -1,0 +1,14 @@
+table{
+  margin: 25px auto;
+ 
+}
+
+td{
+  border:2px solid black;
+  width: 200px;
+  text-align: center;
+}
+
+#header {
+  font-weight: bolder;
+}

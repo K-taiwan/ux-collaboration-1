@@ -1,3 +1,4 @@
+// ---------------------- Global Vars ---------------------------------//
 const $newSubscriber = $('#newSubscriber'); 
 const subscriberInterests = [];
 
@@ -6,7 +7,7 @@ const subscriberInterests = [];
 // ----------- functions -------------- //
 const handleSubmitForm = (event) => {
   event.preventDefault();
-
+  
   const $inputs = $('input');
   $inputs.each(function (index, element) {
   if ($(element).name === 'name' || $(element).name === 'email') {
@@ -20,45 +21,36 @@ const handleSubmitForm = (event) => {
   });
 
   validateInterests();
-
   formData();
 }
 
 const onSuccess = () => {
   console.log('success!');
-
 }
 
 const onError = () => {
   console.log('error!');
 }
 
- const formData = () => {
-   console.log({
-    "firstName": $('#first-name').val(),
-    "lastName": $('#last-name').val(),
-    "email": $('#email').val(),
-    "interests": subscriberInterests,
-  })
-  $.ajax({
-  method: 'POST',
-  url: 'http://localhost:3000/api/v1/subscribers',
-  data: 
-  {
-    "firstName": $('#first-name').val(),
-    "lastName": $('#last-name').val(),
-    "email": $('#email').val(),
-    "interests": subscriberInterests,
-  },
-  success: onSuccess,
-  error: onError,
-})
+//------------------ user data ----------------------------//
+const formData = () => {
+  
+    $.ajax({
+    method: 'POST',
+    url: 'http://localhost:3000/api/v1/subscribers',
+    data: 
+    {
+      "firstName": $('#first-name').val(),
+      "lastName": $('#last-name').val(),
+      "email": $('#email').val(),
+      "interests": subscriberInterests,
+    },
+    success: onSuccess,
+    error: onError,
+  });
 }
-console.log(formData());
 
-
-
-
+// ------------------- control checked boxes ------------------------//
 const validateInterests = () => {
   if ($('#newsInterest').is(':checked')) {
     subscriberInterests.push($('#newsInterest').val());
@@ -76,14 +68,6 @@ const validateInterests = () => {
 }
 
 
+
+// ------------------------ event listener ---------------------------//
 $('form').on('submit', handleSubmitForm); 
-
-
-
-
-
-//foreach to loop through
-//put all under submit function
-
-
-
